@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- DAO와 연결 -->
+<mapper namespace="com.study.Springboot.dao.UserDAO">
+
+    <insert id="insertUser" parameterType="String">
+        INSERT INTO td_user (
+            id,
+            pw,
+            join_date
+        ) VALUES (
+                     #{param1},
+                     #{param2},
+                     CURRENT_DATE()
+                 )
+    </insert>
+
+
+</mapper>
